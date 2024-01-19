@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font: inherit;
+}
+
+
+body {
+  min-height: 100svh;
+}
+
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pokemon--pokelist {
+  height: 586px;
+  overflow: scroll;
+  z-index:100
+}
+#pokemon--wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100dvh;
+    max-width: 1200px;
+}
+
+
+
+
+
+#root {
+  position: relative;
+  /* width: 900px;
+  height: 900px; */
+  content: '';
+  overflow: hidden;
+  text-align: center;
+  z-index:1;
+
+}
+#root::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 200%;
+  background: #F4523B;
+  inset:0;
+  z-index:-10;
+  transform-origin: top left;
+  transform: skewY(-60deg);
+}
+
+#pokemon--big-image {
+  max-width:400px;
+}
+
+
+
+
+#pokemon--summary {
+  margin-right:1rem;
+}
+
+
+
+.pokelist--entry {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.pokelist--entry:focus {
+  outline:2px solid black;
+}
+
+.pokelist--left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.pokelist--right {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.pokelist--name {
+    text-transform: capitalize;
+}
+
+.pokelist--pokeball {
+    height:1.8rem;
+}
+
+@media screen and (max-width:1000px) {
+  #pokemon--wrapper {
+    flex-direction: column;
+  }
+  #pokemon--pokelist {
+    color: whitesmoke;
+    margin-bottom: 2rem;
+    height: 300px;
+  }
+  h3, .pokelist--number {
+    color: whitesmoke;
+  }
+  .pokelist--number {
+    margin-left: 1rem;
+  }
+  .pokelist--entry {
+    border-radius: 34px;
+    background: rgb(0, 0, 0, 0.6)!important;
+    margin-bottom:0.1rem;
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+    width:380px;
+  }
+  .pokelist--pokeball {
+    display: none;
+  }
+  .pokelist--left {
+    gap:0;
+  }
+}
