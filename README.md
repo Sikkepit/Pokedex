@@ -1,4 +1,4 @@
-# Pokedex with React
+# Pokedex with Vite + React
 
 This pokedex displays all the 1st generation Pokemon. It was a great way to start getting into working with React. You can find a live demo at https://dennishemstra.com/pokedex/
 
